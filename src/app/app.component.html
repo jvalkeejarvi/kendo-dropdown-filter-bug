@@ -10,6 +10,20 @@
     (ngModelChange)="valueChange($event)"
   ></kendo-dropdownlist>
 </div>
+<kendo-stockchart>
+  <kendo-chart-series>
+    <kendo-chart-series-item
+      type="line"
+      style="smooth"
+      [markers]="{ visible: false }"
+      [data]="[]"
+      field="value"
+      categoryField="date"
+      aggregate="max"
+    >
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+</kendo-stockchart>
 
 <div>
   <label>Doesn't work</label>
